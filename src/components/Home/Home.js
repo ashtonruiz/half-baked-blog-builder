@@ -9,7 +9,7 @@ export default function Home() {
   // add useState calls here for title, subtitle, font, align, and text
   const [title, setTitle] = useState('');
   const [subtitle, setSubtitle] = useState('');
-  const [font, handleFontChange] = useState('Titillium');
+  const [font, handleFontChange] = useState('titillium');
   console.log(font, 'its working');
   const [text, setText] = useState('');
   return (
