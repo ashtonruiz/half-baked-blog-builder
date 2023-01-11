@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Editor.css';
 
-export default function Editor({ setTitle, setSubtitle }) {
+export default function Editor({ setTitle, setSubtitle, handleFontChange, setText }) {
   return (
     <div className="editor">
       <div className="form-control">
@@ -14,7 +14,7 @@ export default function Editor({ setTitle, setSubtitle }) {
         <label htmlFor="subtitle">Subtitle</label>
       </div>
       <div className="form-control">
-        <select>
+        <select value="font" onChange={(e) => handleFontChange(e.target.value)}>
           <option value="architect">{"Architect's Daughter"}</option>
           <option value="comforter">Comforter</option>
           <option value="fredoka">Fredoka</option>
@@ -44,7 +44,7 @@ export default function Editor({ setTitle, setSubtitle }) {
         </div>
       </div>
       <div className="form-control">
-        <textarea style={{ height: '250px' }} />
+        <textarea style={{ height: '250px' }} onChange={(e) => setText(e.target.value)} />
         <label>Text</label>
       </div>
     </div>
